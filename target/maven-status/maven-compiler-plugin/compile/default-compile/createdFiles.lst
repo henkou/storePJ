@@ -1,1 +1,5 @@
-org\example\store\Main.class
+org\example\store\dao\TestDAO.class
+org\example\store\controller\Main.class
+org\example\store\dao\TestDAOImpl.class
+org\example\store\service\TestServiceImpl.class
+org\example\store\service\TestService.class

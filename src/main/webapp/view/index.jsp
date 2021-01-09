@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -28,6 +30,47 @@
   </head>
 
   <body>
+  <div class="page-wrapper">
+      <div class="container-fluid">
+          <div class="col-lg-8"><!--게시판 넓이 -->
+              <div class="col-lg-12">
+                  <h1 class="page-header">공지사항 관리</h1>
+              </div>
+              <div class="row">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-outline btn-primary pull-right">
+                            <i class="fa fa-edit fa-fw"></i> 공지사항 작성
+                        </button>
+                    </div>
+                </div>
+              <div class="panel panel-default">
+                  <div class="panel-heading">공지사항 </div>
+                  <div class="panel-body">
+                      <table class="table table-hover">
+                          <thead>
+                              <tr>
+                                  <th>username</th>
+                                  <th>password</th>
+                                  <th>etc</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <c:forEach items="${list}" var="testDTO">
+                                    <tr>
+                                      <td><c:out value="${testDTO.username}" /></td>
+                                      <td><c:out value="${testDTO.password}" /></td>
+                                      <td><c:out value="${testDTO.etc}" /></td>
+                                     </tr>
+                                </c:forEach>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
     <!-- Page Preloder -->
     <div id="preloder">
       <div class="loader"></div>

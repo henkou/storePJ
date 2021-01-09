@@ -3,5 +3,10 @@
         PUBLIC "-//mybatis.rog//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
+    <typeAliases>
+        <typeAlias type="org.example.store.dao.TestDAO" alias="Test"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="mappers/testMapper.xml"/>
+    </mappers>
 </configuration>
